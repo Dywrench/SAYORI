@@ -9,14 +9,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="hearts-container" id="hearts-container"></div>
+<!-- Pantalla de bienvenida -->
+<div id="welcome-screen" style="position:fixed;top:0;left:0;width:100%;height:100%;background-color:#ffeaf5;display:flex;justify-content:center;align-items:center;z-index:1000;flex-direction:column;text-align:center;">
     
+    <!-- Contenedor de corazones de bienvenida -->
+    <div id="welcome-hearts" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;"></div>
+    
+    <h2 style="font-family:'Poppins', sans-serif; color:#ff6fa8; z-index:1;">Welcome, my princesita hermosa Sayori 💖</h2>
+    <p style="font-size: 1rem; color: #555; z-index:1;">¡Feliz primes mesesario!</p>
+    
+    <button id="start-btn" style="margin-top:1rem;padding:1rem 2rem;font-size:1.2rem;border:none;border-radius:10px;background-color:#ff6fa8;color:white;cursor:pointer; z-index:1;">
+        presioname :3
+    </button>
+    
+</div>
+
+
+    <div class="hearts-container" id="hearts-container"></div>
+
     <div class="container">
         <header>
             <h1>To my beloved Sayori</h1>
-            <div class="subtitle">Every beat of my heart carries your name</div>
+            <div class="subtitle">Every beat of my heart carries your name.</div>
         </header>
-        
+
         <section class="love-counter">
             <h2 class="section-title">My Endless Love for You</h2>
             <div class="counter-display" id="counter-display">I love you more than 0 times, my love.</div>
@@ -27,7 +43,7 @@
             <h2 class="section-title">Reasons Why I Love You</h2>
             <div class="reasons-grid" id="reasons-grid"></div>
         </section>
-        
+
         <section class="photo-collage">
             <div class="photo-item">
                 <img src="./images/foto1.jpg" alt="Our photo 1">
@@ -42,7 +58,7 @@
                 <img src="./images/foto4.jpg" alt="Our photo 4">
             </div>
         </section>
-        
+
         <section class="music-player">
             <h2 class="section-title">Our Songs</h2>
             <div class="song-title" id="song-title">Choose a song</div>
@@ -61,12 +77,22 @@
             <p class="player-info" id="player-info">Ready for the beats of our music</p>
         </section>
     </div>
-    
+
     <footer>
         <p>Happy first month. I love you <span class="heart-pulse"><i class="fas fa-heart"></i></span> my princess with beautiful eyes - Sayori</p>
         <p>Every day I love you more than yesterday and less than tomorrow</p>
     </footer>
-    
+
     <script src="./js/script.js"></script>
+
+    <!-- Script para iniciar canción con clic -->
+    <script>
+        document.getElementById('start-btn').addEventListener('click', () => {
+            document.getElementById('welcome-screen').style.display = 'none';
+            if (typeof miNovia !== 'undefined' && typeof miNovia.reproducirCancion === 'function') {
+                miNovia.reproducirCancion(3);
+            }
+        });
+    </script>
 </body>
 </html>
