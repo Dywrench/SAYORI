@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+    background: linear-gradient(135deg, #ffc5cf, #ffc3a0);
     color: #5a3e36;
     min-height: 100vh;
     overflow-x: hidden;
@@ -82,16 +82,22 @@ h1 {
     font-family: 'Dancing Script', cursive;
     font-size: 2.2rem;
     color: #d7385e;
-    min-height: 120px;
+    height: 120px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin: 20px 0;
     padding: 15px;
     border: 2px dashed #ffafbd;
     border-radius: 10px;
     background: rgba(255, 245, 245, 0.7);
-    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.counter-display span {
+    display: block;
+    line-height: 1.3;
 }
 
 .reasons-section {

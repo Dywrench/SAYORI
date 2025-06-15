@@ -166,19 +166,25 @@ document.getElementById('start-btn').addEventListener('click', () => {
     clearInterval(intervalWelcome); // detiene corazones de bienvenida
 });
 
-
+let loveUpdateCounter = 0;
 // Actualizar el contador de amor
 function updateLoveCounter() {
     miNovia.incrementarAmor();
-    counterDisplay.textContent = miNovia.obtenerMensajeAmor();
-    
+    loveUpdateCounter++;
+
+    // Solo actualiza el mensaje de texto cada 10 veces
+    if (loveUpdateCounter % 10 === 0) {
+        counterDisplay.textContent = miNovia.obtenerMensajeAmor();
+    }
+
     if (miNovia.vecesAmada % 5 === 0) {
         createHeart();
     }
-    
+
     const hue = (miNovia.vecesAmada * 0.1) % 360;
     document.body.style.background = `linear-gradient(135deg, hsl(${hue}, 100%, 85%), hsl(${(hue + 40) % 360}, 100%, 85%))`;
 }
+
 
 // Cargar razones
 function cargarRazones() {
