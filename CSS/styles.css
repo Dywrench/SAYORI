@@ -265,4 +265,111 @@ footer {
     .photo-collage {
         grid-template-columns: repeat(2, 1fr);
     }
+
+   
+   /* Estilo para el botón del poema */
+.poem-btn {
+    background: linear-gradient(135deg, #ff6fa8, #d7385e);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(215, 56, 94, 0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.poem-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(215, 56, 94, 0.4);
+    background: linear-gradient(135deg, #d7385e, #ff6fa8);
+}
+
+.poem-btn i {
+    font-size: 1.2rem;
+}
+
+/* Estilo para los botones de idioma */
+.language-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.lang-btn {
+    background: rgba(255, 255, 255, 0.9);
+    color: #d7385e;
+    border: 2px solid #ffafbd;
+    padding: 8px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.lang-btn:hover {
+    background: #ff6fa8;
+    color: white;
+    border-color: #ff6fa8;
+}
+
+.lang-btn.active {
+    background: #d7385e;
+    color: white;
+    border-color: #d7385e;
+}
+
+.lang-btn i {
+    font-size: 0.9rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilos para el contenedor del poema */
+#poema-container {
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos para la imagen del poema */
+#poema-img {
+    max-width: 100%;
+    height: auto;
+    display: none; /* Oculto inicialmente */
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Estilos para los botones de idioma */
+#poema-buttons {
+    display: none; /* Oculto inicialmente */
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Animación para suavizar la aparición */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 }

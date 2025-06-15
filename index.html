@@ -59,6 +59,19 @@
             </div>
         </section>
 
+        <section id="poema-section" style="text-align:center; margin:2rem 0;">
+    <button id="toggle-poem-btn" class="poem-btn">
+        <i class="fas fa-book-open"></i> Show Poem / Mostrar Poema
+    </button>
+    <div id="poema-container">
+        <img id="poema-img" src="" alt="Poema de amor" style="display:none;">
+        <div id="poema-buttons" class="language-buttons" style="display:none;">
+            <button id="btn-es" class="lang-btn active"><i class="fas fa-language"></i> Español</button>
+            <button id="btn-en" class="lang-btn"><i class="fas fa-language"></i> English</button>
+        </div>
+    </div>
+</section>
+
         <section class="music-player">
             <h2 class="section-title">Our Songs</h2>
             <div class="song-title" id="song-title">Choose a song</div>
@@ -76,6 +89,8 @@
             <audio id="audio-player"></audio>
             <p class="player-info" id="player-info">Ready for the beats of our music</p>
         </section>
+
+        
     </div>
 
     <footer>
@@ -85,7 +100,6 @@
 
     <script src="./js/script.js"></script>
 
-    <!-- Script para iniciar canción con clic -->
     <script>
         document.getElementById('start-btn').addEventListener('click', () => {
             document.getElementById('welcome-screen').style.display = 'none';
